@@ -55,7 +55,7 @@
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --watch",
-    "start": "webpack-dev-server --inline --hot --colors --quiet",
+    "start": "webpack-dev-server --inline --hot --colors --quiet --open",
     "build:examples": "webpack --config webpack.config-buildexamples.babel.js -p",
     "libmin": "cross-env NODE_ENV=production webpack --config webpack.config-publish.babel.js",
     "lib": "webpack --config webpack.config-publish.babel.js",
