@@ -8,20 +8,19 @@ export default class Week extends Component {
   // }
   // static defaultProps = {
   // }
-  constructor(props) {
-    super(props);
-    this.state = {
-      daysInWeek: 7,
-    };
-  }
   render() {
-    const { daysInWeek: DAYS_IN_WEEK } = this.state;
+    const styles = {
+      display: 'inline-block',
+      float: 'left',
+      backgroundColor: '#e0e0e0',
+
+    };
     let DaysElements = [];
-    for (let i = 0; i < DAYS_IN_WEEK; i++) {
-      DaysElements.push(<Day key={i} />);
+    for (let i = 0; i < this.props.days; i++) {
+      DaysElements.push(<Day key={i} ></Day>);
     }
     return (
-      <div>
+      <div style={styles}>
         {DaysElements}
       </div>
     );

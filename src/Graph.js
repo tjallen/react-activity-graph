@@ -11,12 +11,18 @@ export default class Graph extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      weeks: 53,
+      daysInWeek: 7,
     };
   }
   render() {
+    let WeekElements = [];
+    for (let i = 0; i < this.state.weeks; i++) {
+      WeekElements.push(<Week key={i} days={this.state.daysInWeek} />);
+    }
     return (
       <div>
-        <Week />
+       {WeekElements} 
       </div>
     );
   }
