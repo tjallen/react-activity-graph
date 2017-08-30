@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+import Week from './Week';
 
 export default class Graph extends Component {
   // static propTypes = {
@@ -15,7 +16,7 @@ export default class Graph extends Component {
   render() {
     return (
       <div>
-        <p>hello world</p>
+        <Week />
       </div>
     );
   }
