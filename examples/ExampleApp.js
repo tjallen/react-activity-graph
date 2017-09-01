@@ -19,9 +19,18 @@ const ExampleApp = () => {
   return (
     <div style={wrapper}>
       {/* {moment().format('MMMM Do YYYY, h:mm:ss a')} */}
+      <p>data only</p>
       <Graph
         data={fakeData}
       />
+      <br />
+      <hr />
+      <p>weeks=4</p>
+      <Graph data={fakeData} weeks={4} />
+      {/* <br />
+      <hr />
+      <p>1 week incase we decide to allow a trim prop etc for data > weeks</p>
+      <Graph data={fakeData} weeks={1} /> */}
     </div>
   );
 };

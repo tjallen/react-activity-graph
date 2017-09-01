@@ -24,9 +24,14 @@ export default class Graph extends Component {
     return fresh.concat(source);
   }
   render() {
+    const styles = {
+      border: '1px solid rgba(0, 0, 0, 0.1)',
+      display: 'inline-block',
+      width: 'auto',
+    };
     const data = this.initData();
     return (
-      <div>
+      <div style={styles}>
       {data.map(week =>
         <Week data={week} key={v4()} />
       )}
