@@ -25,6 +25,13 @@ const ExampleApp = () => {
       />
       <br />
       <hr />
+      <p>color</p>
+      <Graph
+        data={fakeData}
+        color="rebeccapurple"
+      />
+      <br />
+      <hr />
       <p>weeks=4</p>
       <Graph data={fakeData} weeks={4} />
       {/* <br />

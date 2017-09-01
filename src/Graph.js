@@ -8,9 +8,11 @@ export default class Graph extends Component {
   static propTypes = {
     data: PropTypes.array,
     weeks: PropTypes.number,
+    color: PropTypes.string,
   }
   static defaultProps = {
     weeks: 53,
+    color: 'green',
   }
   initData(source = this.props.data) {
     // if this.props.data provides fewer weeks than this.props.weeks,
@@ -33,7 +35,7 @@ export default class Graph extends Component {
     return (
       <div style={styles}>
       {data.map(week =>
-        <Week data={week} key={v4()} />
+        <Week data={week} key={v4()} color={this.props.color} />
       )}
       </div>
     );
