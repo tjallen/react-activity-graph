@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default class Day extends Component {
-  // static propTypes = {
-  // }
+  static propTypes = {
+    children: PropTypes.any,
+  }
   // static defaultProps = {
   // }
   constructor(props) {
