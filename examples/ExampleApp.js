@@ -5,11 +5,20 @@ import React from 'react';
 import Graph from '../src/Graph';
 // import moment from 'moment';
 
-const fakeData = [
-  [0, 0, 0, 0, 0, 0, 0], // week before last
-  [0, 1, 5, 0, 10, 2, 0], // prev week
-  [0, 3, 0, 1, null, null, null], // current week
-];
+// const fakeData = [
+//   [0, 0, 0, 0, 0, 0, 0], // week before last
+//   [0, 1, 5, 0, 10, 2, 0], // prev week
+//   [0, 3, 0, 1, null, null, null], // current week
+// ];
+
+const fakeData = {
+  id: '7cccc9d3-b8f7-43e7-b6f9-f4f672535cf6',
+  name: 'fakeTask',
+  data: {
+    '2017-09-18': '5',
+    '2017-09-16': '2',
+  },
+};
 
 const ExampleApp = () => {
   const wrapper = {

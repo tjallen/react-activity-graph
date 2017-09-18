@@ -6,7 +6,7 @@ import { v4 } from 'uuid';
 
 export default class Graph extends Component {
   static propTypes = {
-    data: PropTypes.array,
+    data: PropTypes.object,
     weeks: PropTypes.number,
     color: PropTypes.string,
   }
@@ -17,13 +17,14 @@ export default class Graph extends Component {
   initData(source = this.props.data) {
     // if this.props.data provides fewer weeks than this.props.weeks,
     // fill the array with blank weeks before passing to <Week />
-    const fresh = this.props.data.slice();
-    const blankWeek = [0, 0, 0, 0, 0, 0, 0];
-    if (source.length === this.props.weeks) return source;
-    fresh.length = this.props.weeks || this.state.weeks;
-    fresh.fill(blankWeek);
-    fresh.splice(fresh.length - source.length);
-    return fresh.concat(source);
+    // const fresh = this.props.data.slice();
+    // const blankWeek = [0, 0, 0, 0, 0, 0, 0];
+    // if (source.length === this.props.weeks) return source;
+    // fresh.length = this.props.weeks || this.state.weeks;
+    // fresh.fill(blankWeek);
+    // fresh.splice(fresh.length - source.length);
+    // return fresh.concat(source);
+    return source;
   }
   render() {
     const styles = {
