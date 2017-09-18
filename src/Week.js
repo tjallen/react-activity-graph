@@ -6,31 +6,28 @@ import { v4 } from 'uuid';
 
 export default class Week extends Component {
   static propTypes = {
-    data: PropTypes.array,
+    // data: PropTypes.array,
     color: PropTypes.string,
-  }
-  renderDayComponent(count) {
-    // console.log(`rDC ${count}`);
-    if (count !== null) {
-      return (
-        <Day key={v4()} count={count} color={this.props.color}>{count}</Day>
-      );
-    }
-    return null;
+    week: PropTypes.any,
   }
   render() {
     const styles = {
       display: 'inline-block',
       float: 'left',
     };
-    const { data } = this.props;
+    const { week } = this.props;
+    console.log(week);
     return (
       <div style={styles}>
-        {data &&
-          data.map(item =>
-            this.renderDayComponent(item)
-          )
-        }
+        {week.map(item =>
+          <Day
+            key={v4()}
+            count={item.value}
+            color={this.props.color}
+          >
+            {item.value}
+          </Day>
+        )}
       </div>
     );
   }

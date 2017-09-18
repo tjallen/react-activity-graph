@@ -3,16 +3,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Week from './Week';
 import { v4 } from 'uuid';
+import { dateUtils } from './dateUtils';
 
 export default class Graph extends Component {
   static propTypes = {
-    data: PropTypes.object,
-    weeks: PropTypes.number,
+    data: PropTypes.any,
+    weekCount: PropTypes.number,
     color: PropTypes.string,
   }
   static defaultProps = {
-    weeks: 53,
+    weekCount: 53,
     color: 'green',
+    currentDate: dateUtils.getCurrentDate(),
+    currentWeekDay: dateUtils.getWeekDay(),
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      weeks: this.initWeeks(props.weekCount),
+    };
   }
   initData(source = this.props.data) {
     // if this.props.data provides fewer weeks than this.props.weeks,
@@ -24,7 +33,25 @@ export default class Graph extends Component {
     // fresh.fill(blankWeek);
     // fresh.splice(fresh.length - source.length);
     // return fresh.concat(source);
+
     return source;
+  }
+  initWeeks() {
+    const weeks = [];
+    const week = [];
+    week.length = 7;
+    weeks.length = this.props.weekCount;
+    week.fill({ date: null, value: null });
+    weeks.fill(week);
+    return weeks;
+  }
+  convertHashToArr(input) {
+    const keys = Object.keys(input);
+    const out = keys.map(key => ({
+      date: key,
+      value: input[key],
+    }));
+    return out;
   }
   render() {
     const styles = {
@@ -32,12 +59,19 @@ export default class Graph extends Component {
       display: 'inline-block',
       width: 'auto',
     };
-    const data = this.initData();
+    // const data = this.initData();
+    console.log('====');
+    console.log(this.state.weeks);
+    console.log(this.convertHashToArr(this.props.data));
     return (
       <div style={styles}>
-      {data.map(week =>
-        <Week data={week} key={v4()} color={this.props.color} />
-      )}
+        {this.state.weeks.map((week, index) =>
+          <Week
+            week={this.state.weeks[index]}
+            key={v4()}
+            color={this.props.color}
+          />
+        )}
       </div>
     );
   }

@@ -17,8 +17,10 @@ const fakeData = {
   data: {
     '2017-09-18': '5',
     '2017-09-16': '2',
-  },
+  }, // => [ { date: '2017-09-18', count: 5 }, ...etc]
 };
+
+const dates = fakeData.data;
 
 const ExampleApp = () => {
   const wrapper = {
@@ -30,23 +32,23 @@ const ExampleApp = () => {
       {/* {moment().format('MMMM Do YYYY, h:mm:ss a')} */}
       <p>data only</p>
       <Graph
-        data={fakeData}
+        data={dates}
       />
       <br />
       <hr />
       <p>color</p>
       <Graph
-        data={fakeData}
+        data={dates}
         color="rebeccapurple"
       />
       <br />
       <hr />
-      <p>weeks=4</p>
-      <Graph data={fakeData} weeks={4} />
+      <p>weekCount=4</p>
+      <Graph data={dates} weekCount={4} />
       {/* <br />
       <hr />
-      <p>1 week incase we decide to allow a trim prop etc for data > weeks</p>
-      <Graph data={fakeData} weeks={1} /> */}
+      <p>1 week incase we decide to allow a trim prop etc for data > weekCount</p>
+      <Graph data={dates} weekCount={1} /> */}
     </div>
   );
 };
