@@ -40,11 +40,13 @@
     "html-webpack-plugin": "^2.22.0",
     "husky": "^0.13.4",
     "mocha": "^3.0.2",
+    "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.5.4",
     "semantic-release": "^4.3.5",
+    "styled-components": "^2.1.2",
     "uuid": "^3.1.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
@@ -69,6 +71,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "dependencies": {}
+  }
 }
