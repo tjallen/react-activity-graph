@@ -16,7 +16,7 @@ export default class Week extends Component {
       float: 'left',
     };
     const { week } = this.props;
-    console.log(week);
+    // console.log(week);
     return (
       <div style={styles}>
         {week.map(item =>
@@ -24,6 +24,7 @@ export default class Week extends Component {
             key={v4()}
             count={item.value}
             color={this.props.color}
+            date={item.date}
           >
             {item.value}
           </Day>
