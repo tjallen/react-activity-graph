@@ -27,17 +27,14 @@ export default class Graph extends Component {
     };
   }
   // init all weeks into a year array
-  createYear(startDate) {
-    const now = moment(startDate);
+  createYear() {
+    const rawDate = moment();
     const year = [];
     for (let i = 0; i < this.props.weekCount; i++) {
-      year.unshift(
-        this.createWeek(
-          moment(now)
-          .subtract(i, 'weeks')
-          .format('YYYY-MM-DD'),
-        )
-      );
+      const formattedDate = moment(rawDate)
+        .subtract(i, 'weeks')
+        .format('YYYY-MM-DD');
+      year.unshift(this.createWeek(formattedDate));
     }
     return year;
   }
@@ -53,14 +50,14 @@ export default class Graph extends Component {
       this.props.normData.forEach(t => {
         if (t.date === date) {
           value = t.value;
-          console.log(`matched ${t} ${date} = ${t.date} => ${t.value}`);
         }
       });
-      week.unshift({
+      const dayObj = {
         date,
         value,
         formattedDate,
-      });
+      };
+      week.unshift(dayObj);
     }
     return week;
   }
