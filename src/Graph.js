@@ -22,6 +22,7 @@ export default class Graph extends Component {
       weeks: this.createYear(),
     };
   }
+  // init all weeks into a year array
   createYear(startDate) {
     const now = moment(startDate);
     const year = [];
@@ -36,26 +37,28 @@ export default class Graph extends Component {
     }
     return year;
   }
+  // init weeks to push to the year array
   createWeek(startDate) {
     const week = [];
     for (let i = 0; i < 7; i++) {
-      week.push({
-        date: moment(startDate)
+      let value;
+      const date = moment(startDate)
         .subtract(i, 'days')
-        .format('YYYY-MM-DD'),
-        value: 0,
+        .format('YYYY-MM-DD');
+      // loop data from props & push to array if date matches
+      this.props.normData.forEach(t => {
+        if (t.date === date) {
+          value = t.value;
+          console.log(`matched ${t} ${date} = ${t.date} => ${t.value}`);
+        }
+      });
+      week.push({
+        date,
+        value,
       });
     }
     return week;
   }
-  // convertHashToArr(input) {
-  //   const keys = Object.keys(input);
-  //   const out = keys.map(key => ({
-  //     date: key,
-  //     value: input[key],
-  //   }));
-  //   return out;
-  // }
   render() {
     const styles = {
       border: '1px solid rgba(0, 0, 0, 0.1)',

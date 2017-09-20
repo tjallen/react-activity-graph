@@ -16,6 +16,7 @@ const fakeData = {
 const normData = [
   { date: '2017-09-18', value: '5' },
   { date: '2017-09-17', value: '2' },
+  { date: '2017-09-20', value: '10' },
 ];
 
 const dates = fakeData.data;
@@ -23,7 +24,7 @@ const dates = fakeData.data;
 const ExampleApp = () => {
   const wrapper = {
     margin: '0 auto',
-    padding: '20px',
+    padding: '20px 80px',
   };
   return (
     <div style={wrapper}>

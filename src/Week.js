@@ -22,7 +22,7 @@ export default class Week extends Component {
         {week.map(item =>
           <Day
             key={v4()}
-            count={item.value}
+            value={item.value}
             color={this.props.color}
             date={item.date}
           >
