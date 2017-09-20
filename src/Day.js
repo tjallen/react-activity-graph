@@ -26,9 +26,10 @@ export default class Day extends Component {
     const opacity = 1 / (maxValue / value);
     const rgbaColor = hexToRGBA(color, opacity);
     const StyledTooltip = styled(Tooltip)`
+      pointer-events: none;
       color: #fff;
       background-color: #242424;
-      width: 100px;
+      width: 140px; 
       text-align: center;
       display: none;
       padding: 5px 4px;
@@ -42,7 +43,6 @@ export default class Day extends Component {
       width: 12px;
       color: #fff;
       &:hover {
-        cursor: pointer;
         background-color: #ffffff;
         border-color: ${this.props.color}
       }
@@ -52,7 +52,7 @@ export default class Day extends Component {
         display: block;
         position: relative;
         top: -28px;
-        left: -50px;
+        left: -70px;
         z-index: 99;
       }
     `;
