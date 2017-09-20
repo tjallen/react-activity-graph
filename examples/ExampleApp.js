@@ -34,19 +34,13 @@ const ExampleApp = () => {
       />
       <br />
       <hr />
-      <p>color</p>
-      {/* <Graph
-        data={dates} normData={normData}
-        color="rebeccapurple"
-      />
-      <br />
-      <hr />
-      <p>weekCount=4</p>
-      <Graph data={dates} normData={normData} weekCount={4} /> */}
+      <p>props: weekCount=4, color='f44336', leftToRight</p>
+      <Graph data={dates} normData={normData} weekCount={4} color="#f44336" leftToRight />
       {/* <br />
       <hr />
       <p>1 week incase we decide to allow a trim prop etc for data > weekCount</p>
-      <Graph data={dates} weekCount={1} /> */}
+      <Graph data={dates} weekCount={1} />
+      */}
     </div>
   );
 };

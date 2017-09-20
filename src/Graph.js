@@ -11,10 +11,12 @@ export default class Graph extends Component {
     weekCount: PropTypes.number,
     color: PropTypes.string,
     normData: PropTypes.any,
+    leftToRight: PropTypes.bool,
   }
   static defaultProps = {
     weekCount: 53,
     color: '#008000',
+    leftToRight: false,
   }
   constructor(props) {
     super(props);
@@ -34,7 +36,11 @@ export default class Graph extends Component {
       const formattedDate = moment(rawDate)
         .subtract(i, 'weeks')
         .format('YYYY-MM-DD');
-      year.unshift(this.createWeek(formattedDate));
+      if (this.props.leftToRight) {
+        year.push(this.createWeek(formattedDate));
+      } else {
+        year.unshift(this.createWeek(formattedDate));
+      }
     }
     return year;
   }
@@ -57,7 +63,11 @@ export default class Graph extends Component {
         value,
         formattedDate,
       };
-      week.unshift(dayObj);
+      if (this.props.leftToRight) {
+        week.push(dayObj);
+      } else {
+        week.unshift(dayObj);
+      }
     }
     return week;
   }
