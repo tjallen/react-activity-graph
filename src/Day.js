@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Tooltip from './Tooltip';
 import styled from 'styled-components';
+import hexToRGBA from 'hex-to-rgba';
 
 export default class Day extends Component {
   static propTypes = {
@@ -20,6 +21,12 @@ export default class Day extends Component {
     };
   }
   render() {
+    const { color, maxValue } = this.props;
+    let { value } = this.props;
+    if (!value) value = 0;
+    const opacity = 1 / (maxValue / value);
+    const rgbaColor = hexToRGBA(color, opacity);
+    // console.log(color, value, maxValue, opacity)
     const StyledTooltip = styled(Tooltip)`
       color: #fff;
       background-color: #242424;
@@ -30,7 +37,7 @@ export default class Day extends Component {
       border-radius: 3px;
     `;
     const StyledDay = styled.div`
-      background-color: ${this.props.color};
+      background-color: ${rgbaColor};
       font-size: 10px;
       border: 1px solid white;
       height: 12px;

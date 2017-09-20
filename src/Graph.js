@@ -14,7 +14,7 @@ export default class Graph extends Component {
   }
   static defaultProps = {
     weekCount: 53,
-    color: 'green',
+    color: '#008000',
   }
   constructor(props) {
     super(props);
@@ -65,9 +65,9 @@ export default class Graph extends Component {
   }
   render() {
     const styles = {
-      border: '1px solid rgba(0, 0, 0, 0.1)',
       display: 'inline-block',
       width: 'auto',
+      background: '#EBEDF0',
     };
     return (
       <div style={styles}>

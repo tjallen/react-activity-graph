@@ -14,9 +14,9 @@ const fakeData = {
 };
 
 const normData = [
-  { date: '2017-09-18', value: '5' },
-  { date: '2017-09-17', value: '2' },
-  { date: '2017-09-20', value: '10' },
+  { date: '2017-09-18', value: 5 },
+  { date: '2017-09-17', value: 2 },
+  { date: '2017-09-20', value: 10 },
 ];
 
 const dates = fakeData.data;
