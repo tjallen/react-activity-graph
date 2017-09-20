@@ -31,12 +31,12 @@ export default class Day extends Component {
       width: 100px;
       text-align: center;
       display: none;
-      padding: 3px;
+      padding: 5px 4px;
       border-radius: 3px;
     `;
     const StyledDay = styled.div`
       background-color: ${rgbaColor};
-      font-size: 10px;
+      font-size: 11px;
       border: 1px solid white;
       height: 12px;
       width: 12px;
@@ -51,7 +51,7 @@ export default class Day extends Component {
       & ${StyledDay}:hover ${StyledTooltip} {
         display: block;
         position: relative;
-        top: -25px;
+        top: -28px;
         left: -50px;
         z-index: 99;
       }

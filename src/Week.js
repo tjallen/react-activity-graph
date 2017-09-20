@@ -16,6 +16,7 @@ const Week = ({ week, maxValue, color }) => {
           key={v4()}
           value={item.value}
           date={item.date}
+          formattedDate={item.formattedDate}
           maxValue={maxValue}
           color={color}
         >

@@ -46,9 +46,9 @@ export default class Graph extends Component {
     const week = [];
     for (let i = 0; i < 7; i++) {
       let value;
-      const date = moment(startDate)
-        .subtract(i, 'days')
-        .format('YYYY-MM-DD');
+      const rawDate = moment(startDate).subtract(i, 'days');
+      const date = moment(rawDate).format('YYYY-MM-DD');
+      const formattedDate = rawDate.format('MMM D, YYYY');
       // loop data from props & push to array if date matches
       this.props.normData.forEach(t => {
         if (t.date === date) {
@@ -59,6 +59,7 @@ export default class Graph extends Component {
       week.push({
         date,
         value,
+        formattedDate,
       });
     }
     return week;
