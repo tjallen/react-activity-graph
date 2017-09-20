@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class Tooltip extends Component {
-  render() {
-    return (
-      <div>{this.props.date} {this.props.count}</div>
-    );
-  }
-}
+const Tooltip = ({ className, date, count }) => (
+  <div className={className}>{count} on {date}</div>
+);
+Tooltip.propTypes = {
+  className: PropTypes.string,
+  date: PropTypes.string,
+  count: PropTypes.number,
+};
+export default Tooltip;

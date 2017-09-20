@@ -18,13 +18,14 @@ export default class Day extends Component {
     };
   }
   render() {
-    const StyledTooltip = styled.div`
-      color: #000;
+    const StyledTooltip = styled(Tooltip)`
+      color: #fff;
+      background-color: #242424;
       width: 100px;
-      border: 1px solid red;
-      background-color: lightgray;
       text-align: center;
       display: none;
+      padding: 3px;
+      border-radius: 3px;
     `;
     const StyledDay = styled.div`
       background-color: ${this.props.color};
@@ -35,20 +36,24 @@ export default class Day extends Component {
       color: #fff;
       &:hover {
         cursor: pointer;
-        border: 1px solid grey;
+        background-color: #ffffff;
+        border-color: ${this.props.color}
       }
      `;
     const Wrapper = styled.div`
       & ${StyledDay}:hover ${StyledTooltip} {
         display: block;
-        position: absolute;
+        position: relative;
+        top: -25px;
+        left: -50px;
+        z-index: 99;
       }
     `;
     const props = this.props;
     return (
       <Wrapper>
         <StyledDay>
-          {this.props.children === null ? 0 : this.props.children}
+          {/* {this.props.children === null ? 0 : this.props.children} */}
           {this.props.tooltip &&
             <StyledTooltip {...props} />
           }
