@@ -22,11 +22,9 @@ export default class Day extends Component {
   }
   render() {
     const { color, maxValue } = this.props;
-    let { value } = this.props;
-    if (!value) value = 0;
+    const value = this.props.value || 0;
     const opacity = 1 / (maxValue / value);
     const rgbaColor = hexToRGBA(color, opacity);
-    // console.log(color, value, maxValue, opacity)
     const StyledTooltip = styled(Tooltip)`
       color: #fff;
       background-color: #242424;
@@ -58,13 +56,12 @@ export default class Day extends Component {
         z-index: 99;
       }
     `;
-    const props = this.props;
     return (
       <Wrapper>
         <StyledDay>
           {/* {this.props.children === null ? 0 : this.props.children} */}
           {this.props.tooltip &&
-            <StyledTooltip {...props} />
+            <StyledTooltip {...this.props} />
           }
         </StyledDay>
       </Wrapper>
