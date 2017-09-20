@@ -31,7 +31,7 @@ export default class Graph extends Component {
     const now = moment(startDate);
     const year = [];
     for (let i = 0; i < this.props.weekCount; i++) {
-      year.push(
+      year.unshift(
         this.createWeek(
           moment(now)
           .subtract(i, 'weeks')
@@ -48,7 +48,7 @@ export default class Graph extends Component {
       let value;
       const rawDate = moment(startDate).subtract(i, 'days');
       const date = moment(rawDate).format('YYYY-MM-DD');
-      const formattedDate = rawDate.format('MMM D, YYYY');
+      const formattedDate = rawDate.format('ddd, MMM D, YYYY');
       // loop data from props & push to array if date matches
       this.props.normData.forEach(t => {
         if (t.date === date) {
@@ -56,7 +56,7 @@ export default class Graph extends Component {
           console.log(`matched ${t} ${date} = ${t.date} => ${t.value}`);
         }
       });
-      week.push({
+      week.unshift({
         date,
         value,
         formattedDate,
