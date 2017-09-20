@@ -61,7 +61,7 @@ export default class Day extends Component {
         <StyledDay>
           {/* {this.props.children === null ? 0 : this.props.children} */}
           {this.props.tooltip &&
-            <StyledTooltip {...this.props} />
+            <StyledTooltip {...this.props}>{value}</StyledTooltip>
           }
         </StyledDay>
       </Wrapper>
