@@ -9,13 +9,14 @@ export default class Week extends Component {
     // data: PropTypes.array,
     color: PropTypes.string,
     week: PropTypes.any,
+    maxValue: PropTypes.any,
   }
   render() {
     const styles = {
       display: 'inline-block',
       float: 'left',
     };
-    const { week } = this.props;
+    const { week, maxValue, color } = this.props;
     // console.log(week);
     return (
       <div style={styles}>
@@ -23,8 +24,9 @@ export default class Week extends Component {
           <Day
             key={v4()}
             value={item.value}
-            color={this.props.color}
             date={item.date}
+            maxValue={maxValue}
+            color={color}
           >
             {item.value}
           </Day>

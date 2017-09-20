@@ -20,6 +20,10 @@ export default class Graph extends Component {
     super(props);
     this.state = {
       weeks: this.createYear(),
+      maxValue: this.props.normData.reduce((prev, curr) => {
+        if (prev.value > curr.value) return prev.value;
+        return curr.value;
+      }),
     };
   }
   // init all weeks into a year array
@@ -31,7 +35,7 @@ export default class Graph extends Component {
         this.createWeek(
           moment(now)
           .subtract(i, 'weeks')
-          .format('YYYY-MM-DD')
+          .format('YYYY-MM-DD'),
         )
       );
     }
@@ -72,6 +76,7 @@ export default class Graph extends Component {
             week={this.state.weeks[index]}
             key={v4()}
             color={this.props.color}
+            maxValue={this.state.maxValue}
           />
         )}
       </div>

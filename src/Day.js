@@ -9,6 +9,7 @@ export default class Day extends Component {
     color: PropTypes.string,
     tooltip: PropTypes.bool,
     value: PropTypes.any,
+    maxValue: PropTypes.any,
   }
   static defaultProps = {
     tooltip: true,
