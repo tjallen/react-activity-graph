@@ -7,10 +7,9 @@ import moment from 'moment';
 
 export default class Graph extends Component {
   static propTypes = {
-    data: PropTypes.any,
     weekCount: PropTypes.number,
     color: PropTypes.string,
-    normData: PropTypes.any,
+    data: PropTypes.any,
     leftToRight: PropTypes.bool,
   }
   static defaultProps = {
@@ -22,7 +21,7 @@ export default class Graph extends Component {
     super(props);
     this.state = {
       weeks: this.createYear(),
-      maxValue: this.props.normData.reduce((prev, curr) => {
+      maxValue: this.props.data.reduce((prev, curr) => {
         if (prev.value > curr.value) return prev.value;
         return curr.value;
       }),
@@ -53,7 +52,7 @@ export default class Graph extends Component {
       const date = moment(rawDate).format('YYYY-MM-DD');
       const formattedDate = rawDate.format('ddd, MMM D, YYYY');
       // loop data from props & push to array if date matches
-      this.props.normData.forEach(t => {
+      this.props.data.forEach(t => {
         if (t.date === date) {
           value = t.value;
         }

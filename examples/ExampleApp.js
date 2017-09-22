@@ -4,22 +4,11 @@ import 'babel-polyfill';
 import React from 'react';
 import Graph from '../src/Graph';
 
-const fakeData = {
-  id: '7cccc9d3-b8f7-43e7-b6f9-f4f672535cf6',
-  name: 'fakeTask',
-  data: {
-    '2017-09-18': '5',
-    '2017-09-16': '2',
-  },
-};
-
-const normData = [
+const data = [
   { date: '2017-09-18', value: 5 },
   { date: '2017-09-17', value: 2 },
   { date: '2017-09-20', value: 10 },
 ];
-
-const dates = fakeData.data;
 
 const ExampleApp = () => {
   const wrapper = {
@@ -30,17 +19,12 @@ const ExampleApp = () => {
     <div style={wrapper}>
       <p>data only</p>
       <Graph
-        data={dates} normData={normData}
+        data={data}
       />
       <br />
       <hr />
       <p>props: weekCount=4, color='f44336', leftToRight</p>
-      <Graph data={dates} normData={normData} weekCount={4} color="#f44336" leftToRight />
-      {/* <br />
-      <hr />
-      <p>1 week incase we decide to allow a trim prop etc for data > weekCount</p>
-      <Graph data={dates} weekCount={1} />
-      */}
+      <Graph data={data} weekCount={4} color="#f44336" leftToRight />
     </div>
   );
 };
