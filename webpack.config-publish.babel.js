@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import path from 'path';
 
 const isProd = (process.env.NODE_ENV === 'production');
 
@@ -33,9 +34,10 @@ module.exports = {
   output: {
     filename: isProd ? 'index-min.js' : 'index.js',
     chunkFilename: '[id].chunk.js',
-    path: 'lib',
+    path: path.resolve(__dirname, 'lib'),
     publicPath: '/',
     libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
 
   plugins: getPlugins(),
@@ -49,7 +51,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           cacheDirectory: true,
         },
