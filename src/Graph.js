@@ -36,14 +36,10 @@ export default class Graph extends Component {
   }
   // init all weeks into a year array
   createYear() {
-    // const rawDate = moment().endOf('week');
     const d = new Date();
     const rawDate = endOfWeek(d);
     const year = [];
     for (let i = 0; i < this.props.weekCount; i++) {
-      // const formattedDate = moment(rawDate)
-      //   .subtract(i, 'weeks')
-      //   .format('YYYY-MM-DD');
       const subbedDate = subWeeks(rawDate, i);
       const formattedDate = format(subbedDate, 'YYYY-MM-DD');
       if (this.props.leftToRight) {
@@ -59,11 +55,8 @@ export default class Graph extends Component {
     const week = [];
     for (let i = 0; i < 7; i++) {
       let value;
-      // const rawDate = moment(startDate).subtract(i, 'days');
       const rawDate = subDays(startDate, i);
-      // const date = moment(rawDate).format('YYYY-MM-DD');
       const date = format(rawDate, 'YYYY-MM-DD');
-      // const formattedDate = rawDate.format('ddd, MMM D, YYYY');
       const formattedDate = format(rawDate, 'ddd, MMM D, YYYY');
       // loop data from props & push to array if date matches
       this.props.data.forEach(t => {

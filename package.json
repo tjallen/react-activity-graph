@@ -29,6 +29,7 @@
     "commitizen": "^2.9.6",
     "cross-env": "^2.0.1",
     "cz-conventional-changelog": "^1.2.0",
+    "date-fns": "^1.28.5",
     "enzyme": "^2.4.1",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^8.0.0",
@@ -41,7 +42,6 @@
     "html-webpack-plugin": "^2.22.0",
     "husky": "^0.13.4",
     "mocha": "^3.0.2",
-    "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.3.2",
@@ -74,6 +74,5 @@
     }
   },
   "dependencies": {
-    "date-fns": "^1.28.5"
   }
 }
