@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Week from './Week';
 import { v4 } from 'uuid';
-import moment from 'moment';
+// import moment from 'moment';
+import dateFns from 'date-fns';
 
-window.moment = moment;
+// window.dateFns = dateFns;
+// window.moment = moment;
 
 export default class Graph extends Component {
   static propTypes = {
@@ -33,12 +35,16 @@ export default class Graph extends Component {
   }
   // init all weeks into a year array
   createYear() {
-    const rawDate = moment().endOf('week');
+    // const rawDate = moment().endOf('week');
+    const d = new Date();
+    const rawDate = dateFns.endOfWeek(d);
     const year = [];
     for (let i = 0; i < this.props.weekCount; i++) {
-      const formattedDate = moment(rawDate)
-        .subtract(i, 'weeks')
-        .format('YYYY-MM-DD');
+      // const formattedDate = moment(rawDate)
+      //   .subtract(i, 'weeks')
+      //   .format('YYYY-MM-DD');
+      const subbedDate = dateFns.subWeeks(rawDate, i);
+      const formattedDate = dateFns.format(subbedDate, 'YYYY-MM-DD');
       if (this.props.leftToRight) {
         year.push(this.createWeek(formattedDate));
       } else {
@@ -52,9 +58,12 @@ export default class Graph extends Component {
     const week = [];
     for (let i = 0; i < 7; i++) {
       let value;
-      const rawDate = moment(startDate).subtract(i, 'days');
-      const date = moment(rawDate).format('YYYY-MM-DD');
-      const formattedDate = rawDate.format('ddd, MMM D, YYYY');
+      // const rawDate = moment(startDate).subtract(i, 'days');
+      const rawDate = dateFns.subDays(startDate, i);
+      // const date = moment(rawDate).format('YYYY-MM-DD');
+      const date = dateFns.format(rawDate, 'YYYY-MM-DD');
+      // const formattedDate = rawDate.format('ddd, MMM D, YYYY');
+      const formattedDate = dateFns.format(rawDate, 'ddd, MMM D, YYYY');
       // loop data from props & push to array if date matches
       this.props.data.forEach(t => {
         if (t.date === date) {

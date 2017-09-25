@@ -72,5 +72,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "date-fns": "^1.28.5"
   }
 }
