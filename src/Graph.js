@@ -5,6 +5,8 @@ import Week from './Week';
 import { v4 } from 'uuid';
 import moment from 'moment';
 
+window.moment = moment;
+
 export default class Graph extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
@@ -31,7 +33,7 @@ export default class Graph extends Component {
   }
   // init all weeks into a year array
   createYear() {
-    const rawDate = moment();
+    const rawDate = moment().endOf('week');
     const year = [];
     for (let i = 0; i < this.props.weekCount; i++) {
       const formattedDate = moment(rawDate)

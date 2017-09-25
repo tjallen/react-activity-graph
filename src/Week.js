@@ -30,6 +30,7 @@ const Week = ({ week, maxValue, color, bgColor }) => {
 
 Week.propTypes = {
   color: PropTypes.string,
+  bgColor: PropTypes.string,
   week: PropTypes.any,
   maxValue: PropTypes.any,
 };
