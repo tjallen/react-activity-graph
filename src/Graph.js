@@ -9,7 +9,7 @@ export default class Graph extends Component {
   static propTypes = {
     weekCount: PropTypes.number,
     color: PropTypes.string,
-    data: PropTypes.any,
+    data: PropTypes.array.isRequired,
     leftToRight: PropTypes.bool,
   }
   static defaultProps = {

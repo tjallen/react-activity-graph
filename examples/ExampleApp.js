@@ -25,6 +25,10 @@ const ExampleApp = () => {
       <hr />
       <p>props: weekCount=4, color='f44336', leftToRight</p>
       <Graph data={data} weekCount={4} color="#f44336" leftToRight />
+      <br />
+      <hr />
+      <p>data = undefined</p>
+      <Graph />
     </div>
   );
 };
