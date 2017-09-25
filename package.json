@@ -29,7 +29,6 @@
     "commitizen": "^2.9.6",
     "cross-env": "^2.0.1",
     "cz-conventional-changelog": "^1.2.0",
-    "date-fns": "^1.28.5",
     "enzyme": "^2.4.1",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^8.0.0",
@@ -53,6 +52,7 @@
     "webpack-dev-server": "^2.8.2"
   },
   "peerDependencies": {
+    "date-fns": "^1.28.5",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
