@@ -11,19 +11,6 @@ import {
 } from 'date-fns';
 
 export default class Graph extends Component {
-  static propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
-    weekCount: PropTypes.number,
-    color: PropTypes.string,
-    bgColor: PropTypes.string,
-    leftToRight: PropTypes.bool,
-  }
-  static defaultProps = {
-    weekCount: 53,
-    color: '#008000',
-    bgColor: '#EBEDF0',
-    leftToRight: false,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -97,3 +84,18 @@ export default class Graph extends Component {
     );
   }
 }
+
+Graph.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  weekCount: PropTypes.number,
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
+  leftToRight: PropTypes.bool,
+};
+
+Graph.defaultProps = {
+  weekCount: 53,
+  color: '#008000',
+  bgColor: '#EBEDF0',
+  leftToRight: false,
+};

@@ -5,16 +5,6 @@ import styled from 'styled-components';
 import hexToRGBA from 'hex-to-rgba';
 
 export default class Day extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-    color: PropTypes.string,
-    tooltip: PropTypes.bool,
-    value: PropTypes.any,
-    maxValue: PropTypes.any,
-  }
-  static defaultProps = {
-    tooltip: true,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -69,3 +59,15 @@ export default class Day extends Component {
     );
   }
 }
+
+Day.propTypes = {
+  children: PropTypes.any,
+  color: PropTypes.string,
+  tooltip: PropTypes.bool,
+  value: PropTypes.any,
+  maxValue: PropTypes.any,
+};
+
+Day.defaultProps = {
+  tooltip: true,
+};
