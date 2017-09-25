@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import Day from './Day';
 import { v4 } from 'uuid';
 
-const Week = ({ week, maxValue, color }) => {
+const Week = ({ week, maxValue, color, bgColor }) => {
   const styles = {
     display: 'inline-block',
     float: 'left',
+    background: bgColor,
   };
   return (
     <div style={styles}>

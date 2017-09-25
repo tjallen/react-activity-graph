@@ -7,14 +7,16 @@ import moment from 'moment';
 
 export default class Graph extends Component {
   static propTypes = {
+    data: PropTypes.array.isRequired,
     weekCount: PropTypes.number,
     color: PropTypes.string,
-    data: PropTypes.array.isRequired,
+    bgColor: PropTypes.string,
     leftToRight: PropTypes.bool,
   }
   static defaultProps = {
     weekCount: 53,
     color: '#008000',
+    bgColor: '#EBEDF0',
     leftToRight: false,
   }
   constructor(props) {
@@ -74,7 +76,6 @@ export default class Graph extends Component {
     const styles = {
       display: 'inline-block',
       width: 'auto',
-      background: '#EBEDF0',
     };
     return (
       <div style={styles}>
@@ -83,6 +84,7 @@ export default class Graph extends Component {
             week={this.state.weeks[index]}
             key={v4()}
             color={this.props.color}
+            bgColor={this.props.bgColor}
             maxValue={this.state.maxValue}
           />
         )}
