@@ -12,7 +12,7 @@ import {
 
 export default class Graph extends Component {
   static propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
     weekCount: PropTypes.number,
     color: PropTypes.string,
     bgColor: PropTypes.string,
