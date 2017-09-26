@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Day from './Day';
-import { v4 } from 'uuid';
 
 const Week = ({ week, maxValue, color, bgColor }) => {
   const styles = {
@@ -12,9 +11,9 @@ const Week = ({ week, maxValue, color, bgColor }) => {
   };
   return (
     <div style={styles}>
-      {week.map(item =>
+      {week.map((item, index) =>
         <Day
-          key={v4()}
+          key={index}
           value={item.value}
           date={item.date}
           formattedDate={item.formattedDate}

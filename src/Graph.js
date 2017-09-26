@@ -2,12 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Week from './Week';
-import { v4 } from 'uuid';
 import {
   format,
   subDays,
   subWeeks,
-  endOfWeek,
+  endOfWeek
 } from 'date-fns';
 
 export default class Graph extends Component {
@@ -74,7 +73,7 @@ export default class Graph extends Component {
         {this.state.weeks.map((week, index) =>
           <Week
             week={this.state.weeks[index]}
-            key={v4()}
+            key={index}
             color={this.props.color}
             bgColor={this.props.bgColor}
             maxValue={this.state.maxValue}
