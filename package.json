@@ -1,10 +1,13 @@
 {
   "name": "react-activity-graph",
-  "version": "0.0.0-semantically-release",
+  "version": "0.1.0",
   "description": "",
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "activity",
+    "graph",
+    "activity-graph"
   ],
   "tags": [],
   "main": "./lib/index.js",
@@ -12,7 +15,7 @@
     "name": "Thom Allen",
     "url": "https://github.com/tjallen"
   },
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/tjallen/react-activity-graph",
   "repository": {
     "type": "git",
