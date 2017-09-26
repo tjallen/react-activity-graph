@@ -1,6 +1,6 @@
 {
   "name": "react-activity-graph",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "keywords": [
     "react",
@@ -11,6 +11,9 @@
   ],
   "tags": [],
   "main": "./lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
   "author": {
     "name": "Thom Allen",
     "url": "https://github.com/tjallen"

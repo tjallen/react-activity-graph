@@ -4,3 +4,5 @@ build/*
 dist/*
 stats.json
 npm-debug.log
+# for testing with `npm pack`
+*.tgz
