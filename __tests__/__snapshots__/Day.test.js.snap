@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day snapshot test 1`] = `
+<div
+  className="sc-htpNat lcFUQH"
+>
+  <div
+    className="sc-bwzfXH cZKcsL"
+  >
+    <div
+      className="sc-bdVaJa dOxDA"
+    >
+      99
+       on 
+      1st Jan, 1901
+    </div>
+  </div>
+</div>
+`;
