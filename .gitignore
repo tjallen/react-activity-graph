@@ -4,5 +4,6 @@ build/*
 dist/*
 stats.json
 npm-debug.log
+coverage
 # for testing with `npm pack`
 *.tgz
