@@ -22,8 +22,22 @@ const component = renderer.create(
   />
 );
 
+const noValueProvided = renderer.create(
+  <Day
+    key={expected.key}
+    date={expected.date}
+    formattedDate={expected.formattedDate}
+    maxValue={expected.maxValue}
+    color={expected.color}
+  />
+);
+
 test('Day snapshot test', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
 
+test('Value defaults to 0 snapshot test', () => {
+  const tree = noValueProvided.toJSON();
+  expect(tree).toMatchSnapshot();
+});

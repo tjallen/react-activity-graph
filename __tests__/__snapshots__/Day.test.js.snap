@@ -17,3 +17,21 @@ exports[`Day snapshot test 1`] = `
   </div>
 </div>
 `;
+
+exports[`Value defaults to 0 snapshot test 1`] = `
+<div
+  className="sc-EHOje fqsyqh"
+>
+  <div
+    className="sc-ifAKCX keRVhf"
+  >
+    <div
+      className="sc-bxivhb gQiCQK"
+    >
+      0
+       on 
+      1st Jan, 1901
+    </div>
+  </div>
+</div>
+`;
