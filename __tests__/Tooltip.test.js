@@ -6,17 +6,18 @@ import Tooltip from '../src/Tooltip';
 
 const { shallow } = Enzyme;
 
-const value = 99;
-const expectedClassName = 'classNamerino';
-const expectedDate = '1901-01-01';
-const expectedOutput = [value, ' on ', expectedDate];
+const expected = {
+  value: 99,
+  className: 'classNamerino',
+  date: '1901-01-01',
+};
 
 const wrapper = shallow(
   <Tooltip
-    className={expectedClassName}
-    formattedDate={expectedDate}
+    className={expected.className}
+    formattedDate={expected.date}
   >
-    {value}
+    {expected.value}
   </Tooltip>
 );
 
@@ -25,10 +26,12 @@ it('renders without crashing', () => {
 });
 
 it('recieves a className prop', () => {
-  expect(wrapper.prop('className')).toEqual(expectedClassName);
+  expect(wrapper.prop('className')).toEqual(expected.className);
 });
 
 it('combines children & formattedDate to display on the tooltip', () => {
-  expect(wrapper.props().children).toEqual(expectedOutput);
+  expect(wrapper.props().children).toEqual(
+    [expected.value, ' on ', expected.date]
+  );
 });
 
