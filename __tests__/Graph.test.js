@@ -25,15 +25,27 @@ const data = [
   { date: fDate, value: 3 },
 ];
 
+const singleData = [
+  { date: fDate, value: 3 },
+];
+
 const component = renderer.create(
   <Graph data={data} weekCount={2} />
 );
 
-// const wrapper = shallow(
-//   <Graph {...props} />
-// );
-
 test('Graph snapshot test', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+it('should reduce data arr to maxValue; store in state as number', () => {
+  const wrapper = shallow(
+    <Graph data={data} weekCount={2} />
+  );
+  expect(typeof(wrapper.state().maxValue)).toBe('number');
+});
+
+it('should store maxValue as number even if arr.length === 1', () => {
+  const wrapper = shallow(<Graph data={singleData} weekCount={2} />);
+  expect(typeof(wrapper.state().maxValue)).toBe('number');
 });
