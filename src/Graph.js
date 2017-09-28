@@ -17,7 +17,7 @@ export default class Graph extends Component {
       maxValue: this.props.data.reduce((prev, curr) => {
         if (prev.value > curr.value) return prev.value;
         return curr.value;
-      }),
+      }, this.props.data[0].value),
     };
   }
   // init all weeks into a year array
