@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Graph snapshot test 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-block",
+      "width": "auto",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "background": "#EBEDF0",
+        "display": "inline-block",
+        "float": "left",
+      }
+    }
+  >
+    <div
+      className="sc-htpNat lcFUQH"
+    >
+      <div
+        className="sc-bwzfXH dUywxE"
+      >
+        <div
+          className="sc-bdVaJa dOxDA"
+        >
+          0
+           on 
+          Sun, Sep 17, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje fqsyqh"
+    >
+      <div
+        className="sc-ifAKCX hwRfnX"
+      >
+        <div
+          className="sc-bxivhb gQiCQK"
+        >
+          0
+           on 
+          Mon, Sep 18, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htoDjs dpnqJM"
+    >
+      <div
+        className="sc-gzVnrw ECQmS"
+      >
+        <div
+          className="sc-bZQynM jkROJx"
+        >
+          0
+           on 
+          Tue, Sep 19, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-gZMcBi gMNwBJ"
+    >
+      <div
+        className="sc-iwsKbI dJFRKU"
+      >
+        <div
+          className="sc-dnqmqq inxySn"
+        >
+          0
+           on 
+          Wed, Sep 20, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jTzLTM gXCKra"
+    >
+      <div
+        className="sc-VigVT hbWLCn"
+      >
+        <div
+          className="sc-gqjmRU fSvBYA"
+        >
+          1
+           on 
+          Thu, Sep 21, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-cSHVUG fkgJpg"
+    >
+      <div
+        className="sc-jzJRlG kCqztP"
+      >
+        <div
+          className="sc-fjdhpX hsEdRP"
+        >
+          0
+           on 
+          Fri, Sep 22, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-kgoBCf gYjrLW"
+    >
+      <div
+        className="sc-chPdSV kYHtdZ"
+      >
+        <div
+          className="sc-kAzzGY itfBWo"
+        >
+          0
+           on 
+          Sat, Sep 23, 2017
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "background": "#EBEDF0",
+        "display": "inline-block",
+        "float": "left",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fqPnek"
+    >
+      <div
+        className="sc-kpOJdX kPKelu"
+      >
+        <div
+          className="sc-kGXeez cgkPFB"
+        >
+          0
+           on 
+          Sun, Sep 24, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-eNQAEJ fzvpNt"
+    >
+      <div
+        className="sc-jKJlTe dKmWsr"
+      >
+        <div
+          className="sc-ckVGcZ hkQVfy"
+        >
+          0
+           on 
+          Mon, Sep 25, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-kkGfuU gqspMv"
+    >
+      <div
+        className="sc-kEYyzF jLlJoM"
+      >
+        <div
+          className="sc-hMqMXs cOqzRQ"
+        >
+          0
+           on 
+          Tue, Sep 26, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-eHgmQL eNzkDE"
+    >
+      <div
+        className="sc-hSdWYo gIsFOb"
+      >
+        <div
+          className="sc-iAyFgw jHykPN"
+        >
+          2
+           on 
+          Wed, Sep 27, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-brqgnP dBWIOd"
+    >
+      <div
+        className="sc-jWBwVP iDvLxM"
+      >
+        <div
+          className="sc-cvbbAY MJlaz"
+        >
+          3
+           on 
+          Thu, Sep 28, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jDwBTQ iofttv"
+    >
+      <div
+        className="sc-jAaTju joVjxG"
+      >
+        <div
+          className="sc-cMljjf eqIYZw"
+        >
+          0
+           on 
+          Fri, Sep 29, 2017
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jlyJG hPwWfC"
+    >
+      <div
+        className="sc-iRbamj wlxNh"
+      >
+        <div
+          className="sc-gPEVay gbsfhR"
+        >
+          0
+           on 
+          Sat, Sep 30, 2017
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
