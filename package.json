@@ -1,6 +1,6 @@
 {
   "name": "react-activity-graph",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "",
   "keywords": [
     "react",
@@ -59,7 +59,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "start": "npm run build",
-    "build": "webpack"
+    "build": "webpack",
+    "pub": "npm run test && npm publish"
   },
   "dependencies": {}
 }
