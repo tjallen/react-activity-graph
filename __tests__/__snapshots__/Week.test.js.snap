@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Graph snapshot test 1`] = `
+<div
+  style={
+    Object {
+      "background": undefined,
+      "display": "inline-block",
+      "float": "left",
+    }
+  }
+>
+  <div
+    className="sc-htpNat lcFUQH"
+  >
+    <div
+      className="sc-bwzfXH kZCWKe"
+    >
+      <div
+        className="sc-bdVaJa dOxDA"
+      >
+        6
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-EHOje fqsyqh"
+  >
+    <div
+      className="sc-ifAKCX vfOHM"
+    >
+      <div
+        className="sc-bxivhb gQiCQK"
+      >
+        5
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-htoDjs dpnqJM"
+  >
+    <div
+      className="sc-gzVnrw eEDgMm"
+    >
+      <div
+        className="sc-bZQynM jkROJx"
+      >
+        4
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-gZMcBi gMNwBJ"
+  >
+    <div
+      className="sc-iwsKbI dyMiCD"
+    >
+      <div
+        className="sc-dnqmqq inxySn"
+      >
+        3
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jTzLTM gXCKra"
+  >
+    <div
+      className="sc-VigVT gMiwNe"
+    >
+      <div
+        className="sc-gqjmRU fSvBYA"
+      >
+        2
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-cSHVUG fkgJpg"
+  >
+    <div
+      className="sc-jzJRlG cfrftn"
+    >
+      <div
+        className="sc-fjdhpX hsEdRP"
+      >
+        1
+         on 
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-kgoBCf gYjrLW"
+  >
+    <div
+      className="sc-chPdSV hYJnEY"
+    >
+      <div
+        className="sc-kAzzGY itfBWo"
+      >
+        0
+         on 
+      </div>
+    </div>
+  </div>
+</div>
+`;
