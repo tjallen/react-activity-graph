@@ -82,12 +82,12 @@ exports[`Graph snapshot test 1`] = `
       className="sc-jTzLTM gXCKra"
     >
       <div
-        className="sc-VigVT hbWLCn"
+        className="sc-VigVT fYwjEu"
       >
         <div
           className="sc-gqjmRU fSvBYA"
         >
-          1
+          0
            on 
           Thu, Sep 21, 2017
         </div>
@@ -97,12 +97,12 @@ exports[`Graph snapshot test 1`] = `
       className="sc-cSHVUG fkgJpg"
     >
       <div
-        className="sc-jzJRlG kCqztP"
+        className="sc-jzJRlG fDlPan"
       >
         <div
           className="sc-fjdhpX hsEdRP"
         >
-          0
+          1
            on 
           Fri, Sep 22, 2017
         </div>
@@ -182,12 +182,12 @@ exports[`Graph snapshot test 1`] = `
       className="sc-eHgmQL eNzkDE"
     >
       <div
-        className="sc-hSdWYo gIsFOb"
+        className="sc-hSdWYo iofMCy"
       >
         <div
           className="sc-iAyFgw jHykPN"
         >
-          2
+          0
            on 
           Wed, Sep 27, 2017
         </div>
@@ -197,12 +197,12 @@ exports[`Graph snapshot test 1`] = `
       className="sc-brqgnP dBWIOd"
     >
       <div
-        className="sc-jWBwVP iDvLxM"
+        className="sc-jWBwVP bnuIIk"
       >
         <div
           className="sc-cvbbAY MJlaz"
         >
-          3
+          2
            on 
           Thu, Sep 28, 2017
         </div>
@@ -212,12 +212,12 @@ exports[`Graph snapshot test 1`] = `
       className="sc-jDwBTQ iofttv"
     >
       <div
-        className="sc-jAaTju joVjxG"
+        className="sc-jAaTju gSfzAH"
       >
         <div
           className="sc-cMljjf eqIYZw"
         >
-          0
+          3
            on 
           Fri, Sep 29, 2017
         </div>

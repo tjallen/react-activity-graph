@@ -49,3 +49,9 @@ it('should store maxValue as number even if arr.length === 1', () => {
   const wrapper = shallow(<Graph data={singleData} weekCount={2} />);
   expect(typeof(wrapper.state().maxValue)).toBe('number');
 });
+
+it('shouldnt crash if provided an empty arr', () => {
+  const emptyArr = [];
+  const wrapper = shallow(<Graph data={emptyArr} weekCount={2} />);
+  expect(typeof (wrapper.state().maxValue)).toBe('number');
+});
