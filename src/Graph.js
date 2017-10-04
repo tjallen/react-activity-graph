@@ -8,6 +8,7 @@ import {
   subWeeks,
   endOfWeek
 } from 'date-fns';
+import './Graph.css';
 
 export default class Graph extends Component {
   constructor(props) {
