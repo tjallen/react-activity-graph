@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Tooltip = ({ className, formattedDate, children }) => (
-  <div className={className}>{children} on {formattedDate}</div>
+const Tooltip = ({ formattedDate, children }) => (
+  <div className="tooltip">{children} on {formattedDate}</div>
 );
 Tooltip.propTypes = {
   className: PropTypes.string,

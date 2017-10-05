@@ -35,7 +35,6 @@ module.exports = merge(common, {
   externals: {
     react: true,
     'date-fns': true,
-    'styled-components': true,
   },
   plugins: getPlugins(),
 });

@@ -70,9 +70,10 @@ export default class Graph extends Component {
       width: 'auto',
     };
     return (
-      <div style={styles}>
+      <div style={styles} className="root">
         {this.state.weeks.map((week, index) =>
           <Week
+            className="week"
             week={this.state.weeks[index]}
             key={index}
             color={this.props.color}
