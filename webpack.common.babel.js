@@ -4,7 +4,7 @@ module.exports = {
     loaders: [
       {
         test: /\.(css|scss|pcss)$/,
-        loader: 'style-loader!css-loader?modules',
+        loader: 'style-loader!css-loader',
       },
       {
         test: /\.jsx?$/,
