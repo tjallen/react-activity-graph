@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Graph from '../lib/index.js';
+import Graph from '../src/';
 
 const rootElement = document.getElementById('app');
 
-const data = [{ date: '2017-09-28', value: 1 }];
+const data = [
+  { date: '2017-09-28', value: 1 },
+  { date: '2017-09-30', value: 2 },
+];
 
 ReactDOM.render(
   <div>

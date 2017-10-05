@@ -6,7 +6,10 @@ import common from './webpack.common.babel.js';
 // dev
 module.exports = merge(common, { 
   devServer: {
-    contentBase: './examples/',
+    contentBase: [
+      './examples/',
+      './src/',
+    ],
   },
   entry: {
     root: './examples/root.js',
