@@ -23,13 +23,13 @@ export default class Graph extends Component {
   }
   // init all weeks into a year array
   createYear() {
-    const d = new Date();
-    const rawDate = endOfWeek(d);
+    const { endDate, weekCount, leftToRight } = this.props;
+    const rawDate = endOfWeek(endDate);
     const year = [];
-    for (let i = 0; i < this.props.weekCount; i++) {
+    for (let i = 0; i < weekCount; i++) {
       const subbedDate = subWeeks(rawDate, i);
       const formattedDate = format(subbedDate, 'YYYY-MM-DD');
-      if (this.props.leftToRight) {
+      if (leftToRight) {
         year.push(this.createWeek(formattedDate));
       } else {
         year.unshift(this.createWeek(formattedDate));
@@ -68,6 +68,7 @@ export default class Graph extends Component {
     const styles = {
       display: 'inline-block',
       width: 'auto',
+      margin: '5px',
     };
     return (
       <div style={styles} className="root">
@@ -92,6 +93,10 @@ Graph.propTypes = {
   color: PropTypes.string,
   bgColor: PropTypes.string,
   leftToRight: PropTypes.bool,
+  endDate: PropTypes.oneOfType([
+    PropTypes.instanceOf(Date),
+    PropTypes.string, // TODO validator for YYYY-MM-DD
+  ]),
 };
 
 Graph.defaultProps = {
@@ -99,4 +104,5 @@ Graph.defaultProps = {
   color: '#008000',
   bgColor: '#EBEDF0',
   leftToRight: false,
+  endDate: new Date(),
 };
