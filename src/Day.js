@@ -11,8 +11,8 @@ export default class Day extends Component {
   }
   render() {
     const { color, maxValue } = this.props;
-    const value = this.props.value || 0;
-    const opacity = 1 / (maxValue / value);
+    const value = this.props.value;
+    const opacity = (maxValue === 0) ? 0 : (1 / (maxValue / value));
     const rgbaColor = hexToRGBA(color, opacity);
     const dayStyles = {
       backgroundColor: rgbaColor,
@@ -37,4 +37,5 @@ Day.propTypes = {
 
 Day.defaultProps = {
   tooltip: true,
+  value: 0,
 };
