@@ -61,7 +61,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "npm run build && webpack-dev-server --open --hot --config webpack.dev.babel.js",
+    "start": "webpack-dev-server --open --hot --config webpack.dev.babel.js",
     "build": "webpack --config webpack.pub.babel.js",
     "pub": "npm run test && npm run build && npm publish"
   }

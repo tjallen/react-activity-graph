@@ -1,7 +1,7 @@
 # wip react component
 
 ### commands
-- `npm start` - runs `npm run build`, then starts webpack-dev-server serving from the `examples` dir, which imports the latest module bundle from `lib`
+- `npm start` - runs `webpack-dev-server` from the `examples` dir, which imports the module from `src` into an example react app
 - `npm test` - runs tests w/ jest
 - `npm run test:watch` - runs tests in watch mode
 - `npm run build` - bundles a build using webpack from `src` -> `lib`
