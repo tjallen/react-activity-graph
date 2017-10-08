@@ -4,7 +4,7 @@ import Tooltip from './Tooltip';
 import hexToRGBA from 'hex-to-rgba';
 
 const Day = (props) => {
-  const { color, maxValue } = props;
+  const { color, maxValue, onDayClick, date, formattedDate } = props;
   const value = props.value;
   const opacity = (maxValue === 0) ? 0 : (1 / (maxValue / value));
   const rgbaColor = hexToRGBA(color, opacity);
@@ -12,7 +12,11 @@ const Day = (props) => {
     backgroundColor: rgbaColor,
   };
   return (
-    <div className="day" style={dayStyles}>
+    <div
+      className="day"
+      style={dayStyles}
+      onClick={() => onDayClick(value, date, formattedDate)}
+    >
       {props.tooltip &&
         <Tooltip {...props}>{value}</Tooltip>
       }
@@ -26,6 +30,7 @@ Day.propTypes = {
   tooltip: PropTypes.bool,
   value: PropTypes.any,
   maxValue: PropTypes.any,
+  onDayClick: PropTypes.func,
 };
 
 Day.defaultProps = {

@@ -20,12 +20,17 @@ export default class Graph extends Component {
         return curr.value;
       }, 0),
     };
+    this.handleDayClick = this.handleDayClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
+    console.log('cWRP', this.props, '=>', nextProps);
     if (!isEqual(nextProps.data, this.props.data)) {
+      console.log('!equal, setState');
       this.setState({
         weeks: this.createYear(nextProps.data),
       });
+    } else {
+      console.log(this.props.data, '===', nextProps.data);
     }
   }
   // init all weeks into a year array
@@ -43,6 +48,14 @@ export default class Graph extends Component {
       }
     }
     return year;
+  }
+  handleDayClick(value, date, formattedDate) {
+    const ret = {
+      value,
+      date,
+      formattedDate,
+    };
+    this.props.onDayClick(ret);
   }
   // init weeks to push to the year array
   createWeek(data, startDate) {
@@ -88,6 +101,7 @@ export default class Graph extends Component {
             color={this.props.color}
             bgColor={this.props.bgColor}
             maxValue={this.state.maxValue}
+            onDayClick={this.handleDayClick}
           />
         )}
       </div>
@@ -106,6 +120,8 @@ Graph.propTypes = {
     PropTypes.string, // TODO validator for YYYY-MM-DD
   ]),
   nullValue: PropTypes.any,
+  onDayClick: PropTypes.func,
+  debug: PropTypes.bool,
 };
 
 Graph.defaultProps = {
@@ -115,4 +131,5 @@ Graph.defaultProps = {
   leftToRight: false,
   endDate: new Date(),
   nullValue: 0,
+  onDayClick: function noOp() {},
 };

@@ -11,10 +11,14 @@ const data = [
 const d = new Date();
 const noData = [];
 
+function onDayClickExampleFn(v) {
+  console.log(v);
+}
+
 ReactDOM.render(
   <div>
     <p>react-activity-graph examples</p>
-    <Graph data={data} />
+    <Graph data={data} onDayClick={onDayClickExampleFn} debug />
     <Graph data={data} endDate="1905-05-05" weekCount={4} />
     <Graph data={data} endDate={d} weekCount={4} />
     <Graph data={noData} />

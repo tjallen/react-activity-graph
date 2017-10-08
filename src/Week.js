@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Day from './Day';
 
-const Week = ({ week, maxValue, color, bgColor }) => {
+const Week = ({ week, maxValue, color, bgColor, onDayClick }) => {
   const styles = {
     display: 'inline-block',
     float: 'left',
@@ -19,6 +19,7 @@ const Week = ({ week, maxValue, color, bgColor }) => {
           formattedDate={item.formattedDate}
           maxValue={maxValue}
           color={color}
+          onDayClick={onDayClick}
         >
           {item.value}
         </Day>
@@ -32,6 +33,7 @@ Week.propTypes = {
   bgColor: PropTypes.string,
   week: PropTypes.any,
   maxValue: PropTypes.any,
+  onDayClick: PropTypes.func,
 };
 
 export default Week;
