@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Tooltip from './Tooltip';
 import hexToRGBA from 'hex-to-rgba';
 
-export default class Day extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-  render() {
-    const { color, maxValue } = this.props;
-    const value = this.props.value;
-    const opacity = (maxValue === 0) ? 0 : (1 / (maxValue / value));
-    const rgbaColor = hexToRGBA(color, opacity);
-    const dayStyles = {
-      backgroundColor: rgbaColor,
-    };
-    return (
-      <div className="day" style={dayStyles}>
-        {this.props.tooltip &&
-          <Tooltip {...this.props}>{value}</Tooltip>
-        }
-      </div>
-    );
-  }
+const Day = (props) => {
+  const { color, maxValue } = props;
+  const value = props.value;
+  const opacity = (maxValue === 0) ? 0 : (1 / (maxValue / value));
+  const rgbaColor = hexToRGBA(color, opacity);
+  const dayStyles = {
+    backgroundColor: rgbaColor,
+  };
+  return (
+    <div className="day" style={dayStyles}>
+      {props.tooltip &&
+        <Tooltip {...props}>{value}</Tooltip>
+      }
+    </div>
+  );
 }
 
 Day.propTypes = {
@@ -39,3 +32,5 @@ Day.defaultProps = {
   tooltip: true,
   value: 0,
 };
+
+export default Day;
