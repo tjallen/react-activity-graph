@@ -18,7 +18,7 @@ const Day = (props) => {
       }
     </div>
   );
-}
+};
 
 Day.propTypes = {
   children: PropTypes.any,

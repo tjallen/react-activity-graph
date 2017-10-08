@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Week from './Week';
@@ -8,21 +7,29 @@ import {
   subWeeks,
   endOfWeek // eslint-disable-line comma-dangle
 } from 'date-fns';
+import isEqual from 'lodash.isequal';
 import './Graph.css';
 
 export default class Graph extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weeks: this.createYear(),
+      weeks: this.createYear(this.props.data),
       maxValue: this.props.data.reduce((prev, curr) => {
         if (prev.value > curr.value) return prev.value;
         return curr.value;
       }, 0),
     };
   }
+  componentWillReceiveProps(nextProps) {
+    if (!isEqual(nextProps.data, this.props.data)) {
+      this.setState({
+        weeks: this.createYear(nextProps.data),
+      });
+    }
+  }
   // init all weeks into a year array
-  createYear() {
+  createYear(data) {
     const { endDate, weekCount, leftToRight } = this.props;
     const rawDate = endOfWeek(endDate);
     const year = [];
@@ -30,15 +37,16 @@ export default class Graph extends Component {
       const subbedDate = subWeeks(rawDate, i);
       const formattedDate = format(subbedDate, 'YYYY-MM-DD');
       if (leftToRight) {
-        year.push(this.createWeek(formattedDate));
+        year.push(this.createWeek(data, formattedDate));
       } else {
-        year.unshift(this.createWeek(formattedDate));
+        year.unshift(this.createWeek(data, formattedDate));
       }
     }
     return year;
   }
   // init weeks to push to the year array
-  createWeek(startDate) {
+  createWeek(data, startDate) {
+    if (!data || !startDate) throw new Error('cWeek missing params');
     const week = [];
     for (let i = 0; i < 7; i++) {
       let value = this.props.nullValue;
@@ -46,7 +54,7 @@ export default class Graph extends Component {
       const date = format(rawDate, 'YYYY-MM-DD');
       const formattedDate = format(rawDate, 'ddd, MMM D, YYYY');
       // loop data from props & push to array if date matches
-      this.props.data.forEach(t => {
+      data.forEach(t => {
         if (t.date === date) {
           value = t.value;
         }
