@@ -6,7 +6,7 @@ import {
   format,
   subDays,
   subWeeks,
-  endOfWeek
+  endOfWeek // eslint-disable-line comma-dangle
 } from 'date-fns';
 import './Graph.css';
 
@@ -41,7 +41,7 @@ export default class Graph extends Component {
   createWeek(startDate) {
     const week = [];
     for (let i = 0; i < 7; i++) {
-      let value;
+      let value = this.props.nullValue;
       const rawDate = subDays(startDate, i);
       const date = format(rawDate, 'YYYY-MM-DD');
       const formattedDate = format(rawDate, 'ddd, MMM D, YYYY');
@@ -97,6 +97,7 @@ Graph.propTypes = {
     PropTypes.instanceOf(Date),
     PropTypes.string, // TODO validator for YYYY-MM-DD
   ]),
+  nullValue: PropTypes.any,
 };
 
 Graph.defaultProps = {
@@ -105,4 +106,5 @@ Graph.defaultProps = {
   bgColor: '#EBEDF0',
   leftToRight: false,
   endDate: new Date(),
+  nullValue: 0,
 };
