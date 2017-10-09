@@ -20,8 +20,8 @@ export default class Graph extends Component {
     this.handleDayClick = this.handleDayClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    // console.log('cWRP', this.props, '=>', nextProps);
-    if (!isEqual(nextProps.data, this.props.data)) {
+    // console.log(Date.now(), '=== cWRP', this.props, '=>', nextProps);
+    if (!isEqual(nextProps, this.props)) {
       // console.log('!equal, setState');
       this.setState({
         weeks: this.createYear(nextProps.data),
