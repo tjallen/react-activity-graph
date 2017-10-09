@@ -15,23 +15,24 @@ export default class Graph extends Component {
     super(props);
     this.state = {
       weeks: this.createYear(this.props.data),
-      maxValue: this.props.data.reduce((prev, curr) => {
-        if (prev.value > curr.value) return prev.value;
-        return curr.value;
-      }, 0),
+      maxValue: this.determineMaxValue(this.props.data),
     };
     this.handleDayClick = this.handleDayClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    console.log('cWRP', this.props, '=>', nextProps);
+    // console.log('cWRP', this.props, '=>', nextProps);
     if (!isEqual(nextProps.data, this.props.data)) {
-      console.log('!equal, setState');
+      // console.log('!equal, setState');
       this.setState({
         weeks: this.createYear(nextProps.data),
+        maxValue: this.determineMaxValue(nextProps.data),
       });
     } else {
-      console.log(this.props.data, '===', nextProps.data);
+      // console.log(this.props.data, '===', nextProps.data);
     }
+  }
+  determineMaxValue(data) {
+    return Math.max(...data.map(date => date.value));
   }
   // init all weeks into a year array
   createYear(data) {

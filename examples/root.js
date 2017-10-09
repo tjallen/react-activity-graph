@@ -7,6 +7,7 @@ const rootElement = document.getElementById('app');
 const data = [
   { date: '2017-09-28', value: 1 },
   { date: '2017-09-30', value: 2 },
+  { date: '2017-10-01', value: 0 },
 ];
 const d = new Date();
 const noData = [];
