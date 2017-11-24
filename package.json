@@ -26,6 +26,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@storybook/react": "^3.2.16",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^21.2.0",
@@ -65,6 +66,7 @@
     "start": "webpack-dev-server --open --hot --config webpack.dev.babel.js",
     "build": "webpack --config webpack.pub.babel.js",
     "pub": "npm run test && npm run build && npm publish",
-    "pub:notest": "npm run build && npm publish"
+    "pub:notest": "npm run build && npm publish",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   }
 }
