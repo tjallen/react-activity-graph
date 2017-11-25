@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withConsole } from '@storybook/addon-console';
 import Graph from '../src/';
 
 const CenterDecorator = (storyFn) => (
@@ -9,6 +10,7 @@ const CenterDecorator = (storyFn) => (
   </div>
 );
 addDecorator(CenterDecorator);
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
 const data = [
   { date: '2017-09-28', value: 1 },
