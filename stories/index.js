@@ -1,7 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Graph from '../src/';
+
+const CenterDecorator = (storyFn) => (
+  <div style={{ textAlign: 'center', margin: '30px' }}>
+    {storyFn()}
+  </div>
+);
+addDecorator(CenterDecorator);
 
 const data = [
   { date: '2017-09-28', value: 1 },
