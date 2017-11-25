@@ -20,7 +20,7 @@ const d = new Date();
 const noData = [];
 
 function onDayClickExampleFn(v) {
-  console.log(v);
+  console.log(JSON.stringify(v));
 }
 
 storiesOf('react-activity-graph', module)
@@ -30,9 +30,9 @@ storiesOf('react-activity-graph', module)
   .add('data, endDate, weekCount=4', () => (
     <Graph data={data} endDate="1905-05-05" weekCount={4} />
   ))
-  .add('data, endDate=now, weekCount=4', () => (
-    <Graph data={data} endDate={d} weekCount={4} />
+  .add('data=[], endDate=now, weekCount=4', () => (
+    <Graph data={noData} endDate={d} weekCount={4} />
   ))
-  .add('no data', () => (
-    <Graph data={noData} />
+  .add('no props', () => (
+    <Graph />
   ));
