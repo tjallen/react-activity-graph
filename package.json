@@ -26,6 +26,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@storybook/addon-console": "^1.0.0",
     "@storybook/react": "^3.2.16",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.2.3",
