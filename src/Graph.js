@@ -5,7 +5,7 @@ import {
   format,
   subDays,
   subWeeks,
-  endOfWeek // eslint-disable-line comma-dangle
+  endOfWeek 
 } from 'date-fns';
 import isEqual from 'lodash.isequal';
 import './Graph.css';
@@ -20,15 +20,11 @@ export default class Graph extends Component {
     this.handleDayClick = this.handleDayClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    // console.log(Date.now(), '=== cWRP', this.props, '=>', nextProps);
     if (!isEqual(nextProps, this.props)) {
-      // console.log('!equal, setState');
       this.setState({
         weeks: this.createYear(nextProps.data),
         maxValue: this.determineMaxValue(nextProps.data),
       });
-    } else {
-      // console.log(this.props.data, '===', nextProps.data);
     }
   }
   determineMaxValue(data) {
