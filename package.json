@@ -26,8 +26,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@storybook/addon-console": "^1.0.0",
-    "@storybook/react": "^3.2.16",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^21.2.0",
@@ -49,6 +47,7 @@
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
+    "react-cosmos": "^3.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^1.3.1",
     "react-test-renderer": "^16.0.0",
@@ -63,10 +62,10 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "npm run storybook",
+    "start": "npm run cosmos",
     "build": "webpack --config webpack.pub.babel.js",
     "pub": "npm run test && npm run build && npm publish",
     "pub:notest": "npm run build && npm publish",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "cosmos": "cosmos"
   }
 }
