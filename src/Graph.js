@@ -122,10 +122,10 @@ Graph.propTypes = {
   ]),
   nullValue: PropTypes.any,
   onDayClick: PropTypes.func,
-  debug: PropTypes.bool,
 };
 
 Graph.defaultProps = {
+  data: [],
   weekCount: 53,
   color: '#008000',
   bgColor: '#EBEDF0',
