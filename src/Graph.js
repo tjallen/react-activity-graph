@@ -83,13 +83,8 @@ export default class Graph extends Component {
     return week;
   }
   render() {
-    const styles = {
-      display: 'inline-block',
-      width: 'auto',
-      margin: '5px',
-    };
     return (
-      <div style={styles} className="root">
+      <div className="root">
         {this.state.weeks.map((week, index) =>
           <Week
             className="week"

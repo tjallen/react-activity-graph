@@ -4,13 +4,8 @@ import PropTypes from 'prop-types';
 import Day from './Day';
 
 const Week = ({ week, maxValue, color, bgColor, onDayClick }) => {
-  const styles = {
-    display: 'inline-block',
-    float: 'left',
-    background: bgColor,
-  };
   return (
-    <div style={styles}>
+    <div className='week'>
       {week.map((item, index) =>
         <Day
           key={index}
