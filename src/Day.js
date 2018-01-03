@@ -4,8 +4,6 @@ import Tooltip from './Tooltip';
 import hexToRGBA from 'hex-to-rgba';
 
 const Day = (props) => {
-  console.log(props);
-  
   const { color, maxValue, onDayClick, date, formattedDate, value } = props;
   let dayStyles;
   if (value) {
