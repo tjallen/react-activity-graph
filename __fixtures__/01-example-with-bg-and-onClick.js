@@ -10,5 +10,12 @@ export default {
   props: {
     data,
     onDayClick,
+    rootStyles: {
+      backgroundColor: '#fff',
+      border: '3px solid black',
+      margin: '20px auto',
+      padding: '10px',
+      width: '95%',
+    },
   }
 }
