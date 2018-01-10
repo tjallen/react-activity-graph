@@ -1,5 +1,5 @@
 import Graph from './../src';
-import data from './../placeholderData';
+import data from './placeholderData';
 
 function onDayClick(v) {
   alert(JSON.stringify(v));
