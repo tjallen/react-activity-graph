@@ -83,8 +83,9 @@ export default class Graph extends Component {
     return week;
   }
   render() {
+    const { rootStyles } = this.props;
     return (
-      <div className="root">
+      <div className="root" style={rootStyles}>
         {this.state.weeks.map((week, index) =>
           <Week
             className="week"
@@ -123,5 +124,6 @@ Graph.defaultProps = {
   leftToRight: false,
   endDate: new Date(),
   nullValue: 0,
+  rootStyles: undefined,
   onDayClick: function noOp() {},
 };
